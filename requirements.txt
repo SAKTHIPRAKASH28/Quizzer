@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+cachetools
+firebase-admin
+cachetools
+google-generativeai
+regex
+sqlalchemy
+psycopg2
