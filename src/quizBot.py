@@ -53,8 +53,10 @@ async def createQuiz(request:Request,body:QuizGenerationModel,db:Session=Depends
             }
             ,correctOption="b")
         format=model_instance.model_dump_json()
-        prompt=f"Create an quiz with {body.no_of_questions} questions on the topic {body.topic} {"Syllabus: "+body.syllabus if body.syllabus else ""} {"additional preferences: "+body.preferences if body.preferences else ""}"
-        prompt+=f"Return in the format {format}"
+        prompt = f"Create a quiz with {body.no_of_questions} questions on the topic {body.topic}"
+        prompt += f"\n Syllabus: {body.syllabus}" if body.syllabus else ""
+        prompt += f"\n additional preferences: {body.preferences}" if body.preferences else ""
+        prompt += f" Return in the format {format}"
         response=chat.send_message(prompt)
         userID=request.state.user
         quiz=extract_json(response.text)
