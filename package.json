@@ -1,0 +1,22 @@
+{
+  "name": "quizzer",
+  "version": "1.0.0",
+  "description": "Backend for quizzer - An online quiz platform that leverages Gemini for quiz generation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SAKTHIPRAKASH28/Quizzer.git"
+  },
+  "author": "Sakthi Prakash",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SAKTHIPRAKASH28/Quizzer/issues"
+  },
+  "homepage": "https://github.com/SAKTHIPRAKASH28/Quizzer#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
